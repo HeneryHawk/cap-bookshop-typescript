@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2019"],
+        "module": "commonjs",
+        "target": "ES2019",
+        "esModuleInterop": true,
+        "rootDir": "./src",
+        "outDir": "./srv",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["node_modules"]
+}

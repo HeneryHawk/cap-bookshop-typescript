@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to CDS",
+            "type": "node",
+            "request": "attach",
+            "port": 9230,
+            "restart": true,
+            "sourceMaps": true,
+            "protocol": "inspector",
+            "timeout": 60000,
+            "skipFiles": ["<node_internals>/**/*.js"]
+        }
+    ]
+}

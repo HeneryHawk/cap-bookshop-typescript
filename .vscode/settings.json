@@ -1,0 +1,11 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "sqltools.connections": [
+        {
+            "database": "C:\\Development\\Workspaces\\vscode\\cloud-cap-bookshop\\db\\bookshop.db",
+            "dialect": "SQLite",
+            "name": "bookshop"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
