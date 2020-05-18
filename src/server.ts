@@ -13,7 +13,7 @@ export class Server {
 
         await cds.connect("db");
         await cds
-            .serve(__dirname + "/gen/csn.json")
+            .serve("./srv/gen/")
             .at("odata")
             .in(app)
             .with(hdl);

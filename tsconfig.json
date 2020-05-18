@@ -7,7 +7,9 @@
         "rootDir": "./src",
         "outDir": "./srv",
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "preserveConstEnums": true,
+        "inlineSourceMap": true
     },
     "include": ["./src/**/*.ts"],
     "exclude": ["node_modules"]
