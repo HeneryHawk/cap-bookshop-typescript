@@ -1,31 +1,30 @@
-# Bookshop Getting Started Sample
+# cap-bookshop-typescript
+This is a sample implementation of the [SAP Application Programming Model (CAP)](https://cap.cloud.sap/) Node.js Runtime using TypeScript.
 
-This stand-alone sample introduces the essential tasks in the development of CAP-based services as also covered in the [Getting Started guide in capire](https://cap.cloud.sap/docs/get-started/in-a-nutshell).
+The implementation was based on the Bookshop example of [SAP samples](https://github.com/SAP-samples/cloud-cap-samples).
 
-## Hypothetical Use Cases
+The following two tools were used in this example:
 
-1. Build a service that allows to browse _Books_ and _Authors_.
-2. Books have assigned _Genres_ which are organized hierarchically.
-3. All users may browse books without login.
-4. All entries are maintained by Administrators.
-5. End users may order books (the actual order mgmt being out of scope)
+## cds2types
+This tool creates interfaces and enums from the CDS definitions for all entities. These interfaces can be used in the TypeScript code to implement a complete and consistent typing.
+
+## cds-routing handlers
+This tool is used for the implementation of class-based implementation of CDS handlers.
 
 ## Running the Sample
-
-```sh
-npm run watch
+Install all dependencies:
 ```
-
-## Content & Best Practices
-
-| Links to capire                                                                                           | Sample files / folders               |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [Project Setup and Layouts](https://cap.cloud.sap/docs/get-started/projects#sharing-and-reusing-content)  | [`./`](./)                           |
-| [Defining Domain Models](https://cap.cloud.sap/docs/guides/domain-models)                                 | [`./db/schema.cds`](./db/schema.cds) |
-| [Defining Services](https://cap.cloud.sap/docs/guides/providing-services)                                 | [`./srv/*.cds`](./srv)               |
-| [Single-purposed Services](https://cap.cloud.sap/docs/guides/providing-services#single-purposed-services) | [`./srv/*.cds`](./srv)               |
-| [Generic Providers](https://cap.cloud.sap/docs/guides/generic-providers)                                  | http://localhost:4004                |
-| [Using Databases](https://cap.cloud.sap/docs/guides/databases)                                            | [`./db/data/*.csv`](./db/data)       |
-| [Adding Custom Logic](https://cap.cloud.sap/docs/guides/service-impl)                                     | [`./srv/*.js`](./srv)                |
-| [Adding Tests](https://cap.cloud.sap/docs/guides/testing)                                                 | [`./test`](./test)                   |
-| [Sharing for Reuse](https://cap.cloud.sap/docs/get-started/projects#sharing-and-reusing-content)          | [`./index.cds`](./index.cds)         |
+npm install
+```
+Build the project:
+```
+npm run build
+```
+and deploy to local sqlite database:
+```
+npm run deploy
+```
+And finaly run the server:
+```
+npm run start
+```
