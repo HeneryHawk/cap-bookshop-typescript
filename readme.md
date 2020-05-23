@@ -34,3 +34,6 @@ npm run start
 |`/db`|Domain models and database-related content|
 |`/src`|Your code written in TypeScript. All your service implementations and handlers go in here and will be compiled to JavaScript when building your project.|
 |`/srv`|The compiled JavaScript resources can be found here. Modifications to this code will be overwritten each time your TypeScript code is recompiled. **DO NOT MODIFY THE CODE IN HERE.**|
+
+**Note:**
+In a real world project, the `/srv` folder would never be added to the git repository because it only contains compiled sources. I have included it here for illustration purposes only.
