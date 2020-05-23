@@ -17,11 +17,14 @@ export class Server {
             .at("odata")
             .in(app)
             .with(hdl);
-
+        // Redirect requests to the OData Service
+        app.get('/', function(req, res) {
+            res.redirect('/odata/')
+        })
         // Run the server.
         const port = process.env.PORT || 3001;
         app.listen(port, async () => {
-            console.info(`Server is listing at ${port}`);
+            console.info(`Server is listing at http://localhost:${port}`);
         });
     }
 }
