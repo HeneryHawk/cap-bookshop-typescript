@@ -7,5 +7,9 @@
             "name": "bookshop"
         }
     ],
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "prettier.printWidth": 160,
+    "prettier.requireConfig": true,
+    "prettier.tabWidth": 4,
+    "editor.formatOnSave": true,
 }

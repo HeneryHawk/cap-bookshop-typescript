@@ -1,2 +1,5 @@
 node_modules
-**/gen/**
+gen
+default-env.json
+!srv/**/*.cds
+srv/*

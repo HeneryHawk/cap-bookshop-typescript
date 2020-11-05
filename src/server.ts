@@ -13,14 +13,16 @@ export class Server {
 
         await cds.connect("db");
         await cds
-            .serve("./srv/gen/")
+            .serve("all")
             .at("odata")
             .in(app)
-            .with(hdl);
+            .with(srv => hdl(srv));
+
         // Redirect requests to the OData Service
         app.get('/', function(req, res) {
             res.redirect('/odata/')
         })
+
         // Run the server.
         const port = process.env.PORT || 3001;
         app.listen(port, async () => {

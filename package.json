@@ -1,37 +1,28 @@
 {
-  "name": "@capire/bookshop",
-  "version": "1.0.0",
-  "description": "A simple self-contained bookshop service.",
-  "dependencies": {
-    "@sap/cds": "^3.34.1",
-    "cds-routing-handlers": "^2.1.1",
-    "express": "^4.17.1",
-    "reflect-metadata": "^0.1.13"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.6",
-    "cds2types": "^2.1.1",
-    "prettier": "^2.0.5",
-    "sqlite3": "^4.2.0",
-    "typescript": "^3.9.2"
-  },
-  "scripts": {
-    "start": "node --inspect=9230 ./srv/server.js",
-    "deploy": "cds deploy --to sqlite:bookshop.db",
-    "build": "npm run build:types && rm -rf ./srv/** && cp ./src/*.cds srv/ && cds build/all --clean &&  tsc",
-    "build:types": "cds2types --cds ./srv/cat-service.cds --output ./src/entities.ts --prefix I"
-  },
-  "cds": {
-    "odata": {
-      "version": "v4"
+    "name": "cap-bookshop-typescript",
+    "version": "1.0.0",
+    "description": "A simple self-contained bookshop service.",
+    "dependencies": {
+        "@sap/cds": "^4.3.0",
+        "cds-routing-handlers": "^3.0.3",
+        "express": "^4.17.1",
+        "reflect-metadata": "^0.1.13"
     },
-    "requires": {
-      "db": {
-        "kind": "sqlite",
-        "credentials": {
-          "database": "bookshop.db"
-        }
-      }
+    "devDependencies": {
+        "@types/express": "^4.17.8",
+        "cds2types": "^2.4.0",
+        "nodemon": "^2.0.6",
+        "prettier": "^2.1.2",
+        "sqlite3": "^4.2.0",
+        "typescript": "^4.0.5"
+    },
+    "scripts": {
+        "start": "node ./srv/server.js",
+        "dev": "npm run build:cds && nodemon",
+        "watch": "cds watch",
+        "deploy": "cds deploy --to sqlite:bookshop.db",
+        "build": "npm run build:cds && npm run build:ts",
+        "build:cds": "echo 'Compiling cds sources...' && cds2types --cds ./src/cat-service.cds --output ./src/entities.ts --prefix I && cds build --clean && cp .cdsrc.json gen/srv",
+        "build:ts": "echo 'Compiling *.ts sources...' && tsc"
     }
-  }
 }

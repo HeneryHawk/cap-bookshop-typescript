@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "sapse.sap-ux-fiori-tools-extension-pack",
+        "SAPOSS.vscode-ui5-language-assistant",
+        "SAPSE.vscode-cds"
+    ],
+    "unwantedRecommendations": []
+}

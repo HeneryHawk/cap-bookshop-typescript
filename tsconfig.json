@@ -4,13 +4,13 @@
         "module": "commonjs",
         "target": "ES2019",
         "esModuleInterop": true,
-        "rootDir": "./src",
-        "outDir": "./srv",
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "outDir": "./gen/srv/srv",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "preserveConstEnums": true,
-        "inlineSourceMap": true
     },
-    "include": ["./src/**/*.ts"],
+    "include": ["src"],
     "exclude": ["node_modules"]
 }

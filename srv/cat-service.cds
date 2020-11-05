@@ -1,4 +1,4 @@
-using {sap.capire.bookshop as my} from '../db/schema';
+using {cap.bookshop.typescript as my} from '../db/schema';
 
 service CatalogService {
 
