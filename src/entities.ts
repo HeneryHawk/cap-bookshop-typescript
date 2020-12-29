@@ -78,17 +78,6 @@ export namespace sap.common {
 }
 
 export namespace CatalogService {
-    export enum ActionSubmitOrder {
-        name = "submitOrder",
-        paramBook = "book",
-        paramAmount = "amount"
-    }
-
-    export interface IActionSubmitOrderParams {
-        book: number;
-        amount: number;
-    }
-
     export interface IBook {
         createdAt?: Date;
         modifiedAt?: Date;
@@ -120,6 +109,17 @@ export namespace CatalogService {
         children: IGenre[];
     }
 
+    export enum ActionSubmitOrder {
+        name = "submitOrder",
+        paramBook = "book",
+        paramAmount = "amount"
+    }
+
+    export interface IActionSubmitOrderParams {
+        book: number;
+        amount: number;
+    }
+
     export enum Entity {
         Book = "CatalogService.Book",
         Currencies = "CatalogService.Currencies",
@@ -133,8 +133,7 @@ export namespace CatalogService {
     }
 }
 
-export interface IUser {
-}
+export type User = string;
 
 export interface ICuid {
     ID: string;
@@ -153,14 +152,12 @@ export interface ITemporal {
 }
 
 export enum Entity {
-    User = "User",
     Cuid = "cuid",
     Managed = "managed",
     Temporal = "temporal"
 }
 
 export enum SanitizedEntity {
-    User = "User",
     Cuid = "Cuid",
     Managed = "Managed",
     Temporal = "Temporal"

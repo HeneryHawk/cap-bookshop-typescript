@@ -10,7 +10,7 @@
     },
     "devDependencies": {
         "@types/express": "^4.17.8",
-        "cds2types": "^2.4.0",
+        "cds2types": "^2.5.1",
         "nodemon": "^2.0.6",
         "prettier": "^2.1.2",
         "sqlite3": "^4.2.0",
@@ -22,7 +22,7 @@
         "watch": "cds watch",
         "deploy": "cds deploy --to sqlite:bookshop.db",
         "build": "npm run build:cds && npm run build:ts",
-        "build:cds": "echo 'Compiling cds sources...' && cds2types --cds ./src/cat-service.cds --output ./src/entities.ts --prefix I && cds build --clean && cp .cdsrc.json gen/srv",
+        "build:cds": "echo 'Compiling cds sources...' && cds2types --cds ./srv/cat-service.cds --output ./src/entities.ts --prefix I && cds build --clean && cp .cdsrc.json gen/srv",
         "build:ts": "echo 'Compiling *.ts sources...' && tsc"
     }
 }
