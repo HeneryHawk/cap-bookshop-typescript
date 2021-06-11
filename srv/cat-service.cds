@@ -11,5 +11,5 @@ service CatalogService {
   };
 
   @requires_ : 'authenticated-user'
-  action submitOrder(book : Book.ID, amount : Integer);
+  action submitOrder(book : Book:ID, amount : Integer);
 }

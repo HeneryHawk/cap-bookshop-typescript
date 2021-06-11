@@ -33,13 +33,13 @@ export namespace cap.bookshop.typescript {
     export enum Entity {
         Author = "cap.bookshop.typescript.Author",
         Book = "cap.bookshop.typescript.Book",
-        Genre = "cap.bookshop.typescript.Genre"
+        Genre = "cap.bookshop.typescript.Genre",
     }
 
     export enum SanitizedEntity {
         Author = "Author",
         Book = "Book",
-        Genre = "Genre"
+        Genre = "Genre",
     }
 }
 
@@ -66,14 +66,14 @@ export namespace sap.common {
         CodeList = "sap.common.CodeList",
         Countries = "sap.common.Countries",
         Currencies = "sap.common.Currencies",
-        Languages = "sap.common.Languages"
+        Languages = "sap.common.Languages",
     }
 
     export enum SanitizedEntity {
         CodeList = "CodeList",
         Countries = "Countries",
         Currencies = "Currencies",
-        Languages = "Languages"
+        Languages = "Languages",
     }
 }
 
@@ -112,7 +112,7 @@ export namespace CatalogService {
     export enum ActionSubmitOrder {
         name = "submitOrder",
         paramBook = "book",
-        paramAmount = "amount"
+        paramAmount = "amount",
     }
 
     export interface IActionSubmitOrderParams {
@@ -123,13 +123,13 @@ export namespace CatalogService {
     export enum Entity {
         Book = "CatalogService.Book",
         Currencies = "CatalogService.Currencies",
-        Genre = "CatalogService.Genre"
+        Genre = "CatalogService.Genre",
     }
 
     export enum SanitizedEntity {
         Book = "Book",
         Currencies = "Currencies",
-        Genre = "Genre"
+        Genre = "Genre",
     }
 }
 
@@ -154,11 +154,11 @@ export interface ITemporal {
 export enum Entity {
     Cuid = "cuid",
     Managed = "managed",
-    Temporal = "temporal"
+    Temporal = "temporal",
 }
 
 export enum SanitizedEntity {
     Cuid = "Cuid",
     Managed = "Managed",
-    Temporal = "Temporal"
+    Temporal = "Temporal",
 }
