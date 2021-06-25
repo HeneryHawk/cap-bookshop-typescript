@@ -4,7 +4,7 @@
     "description": "A simple self-contained bookshop service.",
     "dependencies": {
         "@sap/cds": "^5.1.5",
-        "cds-routing-handlers": "^3.0.4",
+        "cds-routing-handlers": "^3.0.5",
         "express": "^4.17.1",
         "reflect-metadata": "^0.1.13"
     },
@@ -14,7 +14,7 @@
         "nodemon": "^2.0.7",
         "prettier": "^2.3.1",
         "sqlite3": "^5.0.2",
-        "typescript": "^4.3.2"
+        "typescript": "^4.3.4"
     },
     "scripts": {
         "start": "node ./srv/server.js",
