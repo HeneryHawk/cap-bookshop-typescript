@@ -19,7 +19,6 @@
     "scripts": {
         "start": "node ./srv/server.js",
         "dev": "npm run build:cds && nodemon",
-        "watch": "cds watch",
         "deploy": "cds deploy --to sqlite:bookshop.db",
         "build": "npm run build:cds && npm run build:ts",
         "build:cds": "echo 'Compiling cds sources...' && cds2types --cds ./srv/cat-service.cds --output ./src/entities.ts --prefix I -f && cds build && cp .cdsrc.json gen/srv",
