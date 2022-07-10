@@ -13,7 +13,7 @@
         "cds2types": "^2.6.1",
         "nodemon": "^2.0.7",
         "prettier": "^2.3.1",
-        "sqlite3": "^5.0.2",
+        "sqlite3": "^5.0.3",
         "typescript": "^4.3.4"
     },
     "scripts": {
