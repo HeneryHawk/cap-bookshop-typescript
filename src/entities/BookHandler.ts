@@ -23,8 +23,25 @@ export class BookHandler {
     public async addDiscount(@Entities() book: CatalogService.IBook[], @Req() req: any): Promise<void> {
         console.log("Read Books");
 
-        for (const each of book) {
-            if (each.stock > 111) each.title += ` -- 11% discount!`;
+        const addDiscount = (book) => {
+            if (book.stock > 111) book.title += ` -- 11% discount!`;
+            return book
+        }
+
+        const isIterable = (obj) => {
+            // checks for null and undefined
+            if (obj == null) {
+                return false;
+            }
+            return typeof obj[Symbol.iterator] === 'function';
+        }
+
+        if (isIterable(book)) {
+            for (const each of book) {
+                addDiscount(each);
+            }
+        } else {
+            addDiscount(book);
         }
     }
 }
