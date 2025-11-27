@@ -1,5 +1,9 @@
 # cap-bookshop-typescript
 
+> [!CAUTION]
+> The implementation in this project is obsolete.
+> Please refer to the public [CAP documentation](https://cap.cloud.sap/docs/node.js/typescript) for instructions how to setup a typescript based project.
+
 This is a sample implementation of the [SAP Application Programming Model (CAP)](https://cap.cloud.sap/) Node.js Runtime using TypeScript.  
 The implementation is based on the Bookshop example of [SAP samples](https://github.com/SAP-samples/cloud-cap-samples).
 
